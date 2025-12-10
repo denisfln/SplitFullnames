@@ -1,6 +1,6 @@
 # Separação de Nome e Sobrenome com spaCy
 
-Este projeto utiliza um modelo de *Named Entity Recognition (NER)* treinado com spaCy para identificar automaticamente **nome** e **sobrenome** em nomes completos, considerando padrões brasileiros. É possível usar a solução via **API FastAPI** ou via **script local** no terminal.
+Este projeto utiliza um modelo de *Named Entity Recognition (NER)* treinado com spaCy para identificar automaticamente **nome** e **sobrenome** em nomes completos de pessoas, considerando padrões brasileiros. É possível usar a solução via **API FastAPI** ou via **script local** no terminal.
 
 ---
 
@@ -14,7 +14,7 @@ pip install fastapi uvicorn[standard] spacy
 ```bash
 uvicorn api:app --reload
 ```
-3. Instale as dependências:
+3. Enviando requisição:
 ```bash
 curl -X POST -H "Content-Type: application/json" \
      -d "{\"nome_completo\": \"João Pedro da Silva\"}" \
